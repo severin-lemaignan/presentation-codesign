@@ -17,3 +17,7 @@ methodology called LEADOR, that I will introduce during the workshop.
 I will also discuss the next steps for such an approach to be successfully
 applied to more difficult assistive scenarios, like long-term deployments in
 schools for autistic children.
+
+
+*Firest presented at the [BAILAR2021
+workshop](https://sites.google.com/view/bailar-2021/) in August 2021*
