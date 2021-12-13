@@ -19,5 +19,7 @@ applied to more difficult assistive scenarios, like long-term deployments in
 schools for autistic children.
 
 
-*Firest presented at the [BAILAR2021
+*First presented at the [BAILAR2021
 workshop](https://sites.google.com/view/bailar-2021/) in August 2021*
+
+*2nd, augmented, version presented at LAAS-CNRS, Dec 2021*
