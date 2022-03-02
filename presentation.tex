@@ -84,7 +84,7 @@
 %--------------------------------------------------------------------------
 \title{\Large Co-designed head to toe}
 \subtitle{Towards end-to-end participatory design}
-\date{{\bf LAAS-CNRS} | 13 Dec 2021}
+\date{{\bf University of Plymouth} | 02 Mar 2022}
 \author{Séverin Lemaignan}
 \institute{{\bf PAL Robotics} Senior Scientist AI \& Social Interactions}
 
@@ -356,26 +356,16 @@
         \end{column}
     \end{columns}
 
-    \only<1>{
     \begin{itemize}
         \item 9 participants
         \item 3 months; 27 one-hour sessions per participants
         \item $|state| = 20$; $|action\_space| = 11$
         \item Includes participants' personality (Big-5) as input feature
     \end{itemize}
-    
-    }
-
-    \only<2>{
-        \centering
-        \includegraphics[height=4cm]{couch25k/architecture.pdf}
-    }
 
     \badge[caption=Katie Winkle]{colleagues/katie}
 \end{frame}
 }
-
-\imageframe[scale=0.9]{DesignProcess}
 
 {
     \paper{Winkle et al. \textbf{In-Situ Learning from a Domain Expert for Real World Socially Assistive Robot Deployment} RSS 2020}
@@ -395,6 +385,22 @@
 \end{frame}
 }
 
+\imageframe[scale=0.9]{DesignProcess-base}
+\imageframe[scale=0.9]{DesignProcess-irl}
+\imageframe[scale=0.9]{DesignProcess-full}
+
+
+{
+    \paper{Winkle et al. \textbf{In-Situ Learning from a Domain Expert for Real World Socially Assistive Robot Deployment} RSS 2020}
+
+    \begin{frame}{Couch-to-5k: architecture}
+
+        \centering
+        \includegraphics[height=5cm]{couch25k/architecture.pdf}
+
+        \badge[caption=Katie Winkle]{colleagues/katie}
+    \end{frame}
+}
 
 
 \begin{frame}{Input \& output spaces: mostly task-specific}
@@ -421,7 +427,7 @@
     & Facial Expression: Mouth Open* & 0-1 &  Normalised action unit returned by OpenFace \\
     \hline
       \textbf{Static} & \textbf<2>{Elaboration level (self)} & 0-1 & Normalised sum of 3 Likert questions \\
-      \textbf{Engagement} & \textbf<2>{Elaboration level (expert)} & 0-1 & as above but rated by fitness instructor \\
+      \textbf{Engagement} & \textbf<2>{Elaboration level (expert)} & 0-1 & As above but rated by fitness instructor \\
       & \textbf<2>{Activity Level} & 0-1 & Likert question response\\
     \hline
       \textbf{Static} & \textbf<2>{Extroversion} & 0-1 & Big Five measure normalised with respect to max score\\
@@ -440,20 +446,24 @@
 
 Full listing of actions as \textit{\{action-type, style-modifier\}}:
 
+    \vspace{3em}
+
 \resizebox{1.05\linewidth}{!}{
 \begin{tabular}{l|l|l|l|l|l|l|l|l|l|l|l|}
 \cline{2-12}
                                                          & \multicolumn{8}{c|}{\cellcolor[HTML]{FFFFC7}\textbf{Social-Supporting Actions}}                                                                                                                                                                                                                                                                                                      & \multicolumn{2}{c|}{\cellcolor[HTML]{C7EFC6}\textbf{Task Actions}}           & \multicolumn{1}{c|}{\cellcolor[HTML]{ECF4FF}\textbf{Low Level}} \\ \cline{2-12} 
                                                          & \cellcolor[HTML]{FFFC9E}\textbf{Time} & \cellcolor[HTML]{FFFC9E}\textbf{Social}                        & \cellcolor[HTML]{FFFC9E}\textbf{Performance} & \cellcolor[HTML]{FFFC9E}\textbf{Reward} & \cellcolor[HTML]{FFFC9E}\textbf{Check User} & \cellcolor[HTML]{FFFC9E}\textbf{Animation} & \cellcolor[HTML]{FFFC9E}\textbf{Get Closer} & \cellcolor[HTML]{FFFC9E}\textbf{Back Off} & \cellcolor[HTML]{9AFF99}\textbf{Run} & \cellcolor[HTML]{9AFF99}\textbf{Walk} & \cellcolor[HTML]{DAE8FC}\textbf{Eye Colour}                     \\ \hline
-\multicolumn{1}{|l|}{\cellcolor[HTML]{32CB00}\textbf{P}} & Time                                  & Humour                                                         & Maintain                                     & Praise                                  & -                                           & Animation                                  & -                                           & -                                         & Run                                  & Walk                                  & Green                                                           \\ \hline
+    \only<4>{\multicolumn{1}{|l|}{\cellcolor[HTML]{32CB00}\textbf{P}} & Time                                  & Humour                                                         & Maintain                                     & Praise                                  & -                                           & Animation                                  & -                                           & -                                         & Run                                  & Walk                                  & Green                                                           \\ \hline
 \multicolumn{1}{|l|}{\cellcolor[HTML]{F8A102}\textbf{C}} & Time                                  & Challenge                                                      & Speed Up                                     & -                                       & -                                           & -                                          & -                                           & -                                         & Run                                  & Walk                                  & Yellow                                                          \\ \hline
 \multicolumn{1}{|l|}{\cellcolor[HTML]{FFCCC9}\textbf{S}} & Time                                  & \begin{tabular}[c]{@{}l@{}}Challenge\\ Sympathise\end{tabular} & Speed Down                                   & Praise                                  & Check PRE                                   & -                                          & -                                           & -                                         & Run                                  & Walk                                  & Blue                                                            \\ \hline
-\multicolumn{1}{|l|}{\textbf{N}}                         & -                                     & -                                                              & -                                            & -                                       & -                                           & -                                          & Get Closer                                  & Back Off                                  & Run                                  & Walk                                  & White                                                           \\ \hline
+    \multicolumn{1}{|l|}{\textbf{N}}                         & -                                     & -                                                              & -                                            & -                                       & -                                           & -                                          & Get Closer                                  & Back Off                                  & Run                                  & Walk                                  & White                                                           \\ \hline}
 \end{tabular}
 }
 
-{\tiny Style modifiers: P = Positive; C = Challenging; S = Sympathetic; N = Neutral.}
-    }
+
+\only<4>{\tiny Style modifiers: P = Positive; C = Challenging; S = Sympathetic; N = Neutral.}
+
+}
 
 \end{frame}
 
@@ -627,6 +637,32 @@ robot competencies}, ICSR 2015;\newline
     \end{center}
 \end{frame}
 
+
+\begin{frame}{Next steps at PAL}
+    \begin{columns}
+        \begin{column}{0.5\linewidth}
+            \onslide<1->{
+            Can we turn the LEADOR paradigm into a generic \& robust enough technique for broad usage?
+            }
+
+            \onslide<2->{
+                Two use-cases:
+            \begin{itemize}
+                \item robots that know when to help in public administrations
+                \item robot-supported Human-Human Interaction (rHHI) to address elderly isolation
+            \end{itemize}
+        }
+        \end{column}
+        \begin{column}{0.5\linewidth}
+            \begin{center}
+                \includegraphics[width=\linewidth]{figs/aris.jpg}
+            \end{center}
+        \end{column}
+    \end{columns}
+
+
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[plain]
@@ -663,23 +699,23 @@ robot competencies}, ICSR 2015;\newline
         \includegraphics<6>[width=0.9\linewidth]{ros4hri/ids_5}
 \end{frame}
 
-\begin{frame}{Semantic of IDs}
-    \scriptsize
-    \begin{tabular}{@{}lllp{6.5cm}@{}}
-\toprule
-\textbf{Face ID} & \textbf{Body ID} & \textbf{Person ID} & \textbf{Interpretation}                                                                                                                                                                                                                                                                 \\ \midrule
-        \texttt{\#24ac }          & \texttt{Ø     }           & \texttt{Ø     }             & \tiny Face detected - random id \texttt{\#24ac} assigned - corresponding TF frame \texttt{/face\_24ac} is published.                                                                                                                                                                                            \\
-        \texttt{\#d73b }          & \texttt{Ø     }           & \texttt{Ø     }             & \tiny Face detected (possibly a re-detection of a previous one) - random id \texttt{\#d73b} assigned + frame published.                                                                                                                                                                                \\
-        \texttt{Ø      }          & \texttt{\#37ef}           & \texttt{Ø     }             & \tiny Skeleton detected - id \texttt{\#37ef} assigned + frame \texttt{/body\_37ef} published.                                                                                                                                                                                                                   \\
-        \texttt{\#d73b }          & \texttt{\#37ef}           & \texttt{Ø     }             & \tiny Face/body matcher merged the face and the skeleton into a single agent. The 2 previous records do not exist any more independently.                                                                                                                                                     \\
-        \texttt{Ø      }          & \texttt{Ø     }           & \texttt{\#9d8a}             & \tiny Human \texttt{\#9d8a} is known, but not associated to any face or body. Note that TF frame \texttt{/person\_9d8a} might nevertheless exist (for instance, last known position of the human).                                                                                                              \\
-        \texttt{\#d73b }          & \texttt{Ø     }           & \texttt{\#9d8a}             & \tiny Face \texttt{\#d73b} is associated to human \texttt{\#9d8a}. Typical result of successful face recognition.                                                                                                                                                                                               \\
-        \texttt{\#96f1 }          & \texttt{Ø     }           & \texttt{\#9d8a}             & \tiny Human \texttt{\#9d8a} is now associated to face \texttt{\#96f1}: this new association might come from the face tracker losing track of a previous face, thus re-assigning a different id to the face. The newly assigned face is however recognized by the face recognition module as being human \texttt{\#9d8a}. \\
-        \texttt{\#96f1 }          & \texttt{\#37ef}           & \texttt{\#9d8a}             & \tiny The human \texttt{\#9d8a} is fully tracked: both the head and the body are detected.                                                                                                                                                                                                             \\
-        \texttt{Ø      }          & \texttt{\#37ef}           & \texttt{\#9d8a}             & \tiny Only the body of human \texttt{\#9d8a} is tracked: this situation typically occurs if the face trackers loses the face after facial recognition successfully identified the human, and while the skeleton tracker still tracks the body.                                                         \\
-        \texttt{Ø      }          & \texttt{Ø     }           & \texttt{\#b3da}             & \tiny \texttt{\#b3da} is another human, considered by the robot as different to \texttt{\#9d8a}.                                                                                                                                                                                                      \\ \bottomrule
-\end{tabular}
-\end{frame}
+%\begin{frame}{Semantic of IDs}
+%    \scriptsize
+%    \begin{tabular}{@{}lllp{6.5cm}@{}}
+%\toprule
+%\textbf{Face ID} & \textbf{Body ID} & \textbf{Person ID} & \textbf{Interpretation}                                                                                                                                                                                                                                                                 \\ \midrule
+%        \texttt{\#24ac }          & \texttt{Ø     }           & \texttt{Ø     }             & \tiny Face detected - random id \texttt{\#24ac} assigned - corresponding TF frame \texttt{/face\_24ac} is published.                                                                                                                                                                                            \\
+%        \texttt{\#d73b }          & \texttt{Ø     }           & \texttt{Ø     }             & \tiny Face detected (possibly a re-detection of a previous one) - random id \texttt{\#d73b} assigned + frame published.                                                                                                                                                                                \\
+%        \texttt{Ø      }          & \texttt{\#37ef}           & \texttt{Ø     }             & \tiny Skeleton detected - id \texttt{\#37ef} assigned + frame \texttt{/body\_37ef} published.                                                                                                                                                                                                                   \\
+%        \texttt{\#d73b }          & \texttt{\#37ef}           & \texttt{Ø     }             & \tiny Face/body matcher merged the face and the skeleton into a single agent. The 2 previous records do not exist any more independently.                                                                                                                                                     \\
+%        \texttt{Ø      }          & \texttt{Ø     }           & \texttt{\#9d8a}             & \tiny Human \texttt{\#9d8a} is known, but not associated to any face or body. Note that TF frame \texttt{/person\_9d8a} might nevertheless exist (for instance, last known position of the human).                                                                                                              \\
+%        \texttt{\#d73b }          & \texttt{Ø     }           & \texttt{\#9d8a}             & \tiny Face \texttt{\#d73b} is associated to human \texttt{\#9d8a}. Typical result of successful face recognition.                                                                                                                                                                                               \\
+%        \texttt{\#96f1 }          & \texttt{Ø     }           & \texttt{\#9d8a}             & \tiny Human \texttt{\#9d8a} is now associated to face \texttt{\#96f1}: this new association might come from the face tracker losing track of a previous face, thus re-assigning a different id to the face. The newly assigned face is however recognized by the face recognition module as being human \texttt{\#9d8a}. \\
+%        \texttt{\#96f1 }          & \texttt{\#37ef}           & \texttt{\#9d8a}             & \tiny The human \texttt{\#9d8a} is fully tracked: both the head and the body are detected.                                                                                                                                                                                                             \\
+%        \texttt{Ø      }          & \texttt{\#37ef}           & \texttt{\#9d8a}             & \tiny Only the body of human \texttt{\#9d8a} is tracked: this situation typically occurs if the face trackers loses the face after facial recognition successfully identified the human, and while the skeleton tracker still tracks the body.                                                         \\
+%        \texttt{Ø      }          & \texttt{Ø     }           & \texttt{\#b3da}             & \tiny \texttt{\#b3da} is another human, considered by the robot as different to \texttt{\#9d8a}.                                                                                                                                                                                                      \\ \bottomrule
+%\end{tabular}
+%\end{frame}
 
 \begin{frame}{Topics structure: faces}
 
@@ -689,7 +725,9 @@ robot competencies}, ICSR 2015;\newline
     \begin{tabular}{@{}llp{4cm}@{}}
         \toprule
 \textbf{Name} & \textbf{Message type}         & \textbf{Description}                                                \\ \midrule
-        \texttt{/roi       }   & \texttt{hri\_msgs/RegionOfInterestStamped} & Region of the face in the source image                              \\
+        \texttt{/roi       }   & \texttt{sensor\_msgs/RegionOfInterest} & Region of the face in the source image                              \\
+        \texttt{/cropped       }   & \texttt{sensor\_msgs/Image} & Cropped face                              \\
+        \texttt{/frontalized       }   & \texttt{sensor\_msgs/Image} & Frontalised face                              \\
         \texttt{/landmarks }   & \texttt{hri\_msgs/FacialLandmarks    } & The 2D facial landmarks extracted from the face                     \\
         \texttt{/facs      }   & \texttt{hri\_msgs/FacialActionUnits  } & The presence and intensity of facial action units found in the face \\
         \texttt{/expression}   & \texttt{hri\_msgs/Expression         } & The expression recognised from the face           \\  \bottomrule               
@@ -705,7 +743,8 @@ robot competencies}, ICSR 2015;\newline
     \begin{tabular}{@{}llp{4cm}@{}}
         \toprule
         \textbf{Name} & \textbf{Message type}         & \textbf{Description}                                                \\ \midrule
-        \texttt{/roi       }   & \texttt{hri\_msgs/RegionOfInterestStamped} & Region of the whole body in the source image                              \\
+        \texttt{/roi       }   & \texttt{sensor\_msgs/RegionOfInterest} & Region of the whole body in the source image                              \\
+        \texttt{/cropped       }   & \texttt{sensor\_msgs/Image} & Cropped image of the body                              \\
         \texttt{/skeleton2d}   & \texttt{hri\_msgs/Skeleton2D}        & The 2D points of the detected skeleton                              \\
         \texttt{/attitude}    & \texttt{hri\_msgs/BodyAttitude}      & Recognised body attitude or gesture                                 \\
         \bottomrule               
@@ -785,19 +824,27 @@ robot competencies}, ICSR 2015;\newline
     \end{columns}
 \end{frame}
 
-\imageframe[scale=0.95]{ros4hri/ros4hri-pipeline2}
-
-\begin{frame}{ROS4HRI: status}
-
-    \begin{itemize}
-        \item v0 published, with reference implementation
-        \item on-going work at PAL to use SotA DNNs for eg body posture estimation + better software engineering + real-time performance on ARI. Indicative ETA: 6-8 months
-        \item \texttt{libhri} in early spec stage
-        \item modeling gaps; need real-world use-case to better identify them $\rightarrow$ EU SPRING project
-    \end{itemize}
+\begin{frame}{One possible pipeline (but other are possible!)}
+    \begin{center}
+        \includegraphics[height=7cm]{ros4hri/ros4hri-pipeline2}
+    \end{center}
 \end{frame}
 
-\imageframe{ros4hri/spring-arch}
+\begin{frame}[plain]{}
+
+    \Large
+    \center
+    {\bf ROS4HRI to become REP-155}
+
+    \vspace{1em}
+    Currently under public consultation here:\\
+    {\bf \href{https://github.com/ros-infrastructure/rep/pull/338}{github.com/ros-infrastructure/rep/pull/338}}
+
+\end{frame}
+
+\imageframe[scale=0.95]{ros4hri/ros4hri-status.png}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
@@ -805,19 +852,25 @@ robot competencies}, ICSR 2015;\newline
     \begin{frame}[plain]
 
         \begin{columns}
-            \begin{column}{0.6\linewidth}
+            \begin{column}{0.5\linewidth}
             \end{column}
-            \begin{column}{0.4\linewidth}
+            \begin{column}{0.5\linewidth}
 
                 \setbeamercolor{hriSec1Demo}{fg=white!70!black}
-                \vspace{6em}
+                \vspace{14em}
                 \begin{beamercolorbox}[wd=\linewidth,ht=6ex,dp=0.7ex]{hriSec1Demo}
                     \textbf{Thank you!}
 
-                    \vspace{2em}
+                    \vspace{4em}
+
                     \footnotesize
-                    Get the slides:\\
+                    Slides:\\
                     \href{https://github.com/severin-lemaignan/presentation-codesign}{github.com/severin-lemaignan/presentation-codesign}
+
+                    \vspace{2em}
+
+                    (btw, we are always looking for great people to join us: drop me line if you want to know more!)
+
                 \end{beamercolorbox}
             \end{column}
         \end{columns}
