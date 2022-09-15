@@ -84,7 +84,7 @@
 %--------------------------------------------------------------------------
 \title{\Large Co-designed head to toe}
 \subtitle{Towards end-to-end participatory design}
-\date{{\bf HRI'22 PD/EUP Workshop} | 07 Mar 2022}
+\date{{\bf AASS Seminar} | 15 Sep 2022}
 \author{Séverin Lemaignan}
 \institute{{\bf PAL Robotics} Senior Scientist AI \& Social Interactions}
 
@@ -197,6 +197,12 @@
 
 \imageframe[color=black,caption=Study 1: robots4SEN]{figs/robots4sen/image1.jpeg}
 
+{
+    \paper{Newbutt et al. \textbf{Co-designing a social robot in a SEN school:
+    Listening to the ambitions of autistic children and their teachers}
+    Interaction Studies 2022}
+
+
 \begin{frame}{Participatory design with autistic children}
 
     \begin{center}
@@ -212,6 +218,11 @@
 
     \end{center}
 \end{frame}
+}
+
+{
+    \paper{Lemaignan et al. \textbf{A social robot in a school for
+autistic children} IJSR 2022}
 
 \begin{frame}{Well-being and autism}
     \begin{columns}
@@ -234,6 +245,26 @@
         \includegraphics[width=0.8\linewidth]{figs/robots4sen/fig1.2.png}
     \end{center}
 \end{frame}
+
+\begin{frame}{Impact on well-being}
+    \begin{columns}
+        \begin{column}{0.5\linewidth}
+            \begin{center}
+                \includegraphics[width=\linewidth]{figs/robots4sen/moods.png}
+            \end{center}
+        \end{column}
+        \begin{column}{0.5\linewidth}
+            \begin{center}
+                \includegraphics[width=\linewidth]{figs/robots4sen/moods_plot.pdf}
+            \end{center}
+        \end{column}
+    \end{columns}
+
+    \begin{center}
+        \small (in-depth qualitative and quantitative analysis in the paper)
+    \end{center}
+\end{frame}
+}
 
 
 \begin{frame}{Social companions to support children's well-being}
@@ -260,7 +291,6 @@
 
     \end{center}
 \end{frame}
-
 
 \section*{Social autonomy @school}
 
@@ -509,7 +539,7 @@
 }
 
     {\tiny Features followed by * were ultimately removed due to unreliable
-    detection}. \only<2>{\tiny\bf Non-task specific features.}
+    detection}. \only<2>{\tiny In {\bf bold}, non-task specific features.}
 }
     \only<3->{
 
@@ -522,15 +552,19 @@ Full listing of actions as \textit{\{action-type, style-modifier\}}:
 \cline{2-12}
                                                          & \multicolumn{8}{c|}{\cellcolor[HTML]{FFFFC7}\textbf{Social-Supporting Actions}}                                                                                                                                                                                                                                                                                                      & \multicolumn{2}{c|}{\cellcolor[HTML]{C7EFC6}\textbf{Task Actions}}           & \multicolumn{1}{c|}{\cellcolor[HTML]{ECF4FF}\textbf{Low Level}} \\ \cline{2-12} 
                                                          & \cellcolor[HTML]{FFFC9E}\textbf{Time} & \cellcolor[HTML]{FFFC9E}\textbf{Social}                        & \cellcolor[HTML]{FFFC9E}\textbf{Performance} & \cellcolor[HTML]{FFFC9E}\textbf{Reward} & \cellcolor[HTML]{FFFC9E}\textbf{Check User} & \cellcolor[HTML]{FFFC9E}\textbf{Animation} & \cellcolor[HTML]{FFFC9E}\textbf{Get Closer} & \cellcolor[HTML]{FFFC9E}\textbf{Back Off} & \cellcolor[HTML]{9AFF99}\textbf{Run} & \cellcolor[HTML]{9AFF99}\textbf{Walk} & \cellcolor[HTML]{DAE8FC}\textbf{Eye Colour}                     \\ \hline
-    \only<4>{\multicolumn{1}{|l|}{\cellcolor[HTML]{32CB00}\textbf{P}} & Time                                  & Humour                                                         & Maintain                                     & Praise                                  & -                                           & Animation                                  & -                                           & -                                         & Run                                  & Walk                                  & Green                                                           \\ \hline
+%    \only<4>{
+        \multicolumn{1}{|l|}{\cellcolor[HTML]{32CB00}\textbf{P}} & Time                                  & Humour                                                         & Maintain                                     & Praise                                  & -                                           & Animation                                  & -                                           & -                                         & Run                                  & Walk                                  & Green                                                           \\ \hline
 \multicolumn{1}{|l|}{\cellcolor[HTML]{F8A102}\textbf{C}} & Time                                  & Challenge                                                      & Speed Up                                     & -                                       & -                                           & -                                          & -                                           & -                                         & Run                                  & Walk                                  & Yellow                                                          \\ \hline
 \multicolumn{1}{|l|}{\cellcolor[HTML]{FFCCC9}\textbf{S}} & Time                                  & \begin{tabular}[c]{@{}l@{}}Challenge\\ Sympathise\end{tabular} & Speed Down                                   & Praise                                  & Check PRE                                   & -                                          & -                                           & -                                         & Run                                  & Walk                                  & Blue                                                            \\ \hline
-    \multicolumn{1}{|l|}{\textbf{N}}                         & -                                     & -                                                              & -                                            & -                                       & -                                           & -                                          & Get Closer                                  & Back Off                                  & Run                                  & Walk                                  & White                                                           \\ \hline}
+    \multicolumn{1}{|l|}{\textbf{N}}                         & -                                     & -                                                              & -                                            & -                                       & -                                           & -                                          & Get Closer                                  & Back Off                                  & Run                                  & Walk                                  & White                                                           \\ \hline
+%}
 \end{tabular}
 }
 
 
-\only<4>{\tiny Style modifiers: P = Positive; C = Challenging; S = Sympathetic; N = Neutral.}
+%\only<4>{
+    \tiny Style modifiers: P = Positive; C = Challenging; S = Sympathetic; N = Neutral.
+%}
 
 }
 
@@ -605,9 +639,10 @@ Full listing of actions as \textit{\{action-type, style-modifier\}}:
 
 
 {
-    \paper{Senft at al. \textbf{SPARC: Supervised progressively autonomous
+    \fullbackground{leador-paper}
+    \paper{Senft et al. \textbf{SPARC: Supervised progressively autonomous
 robot competencies}, ICSR 2015;\newline
-    Winkle, Senft, Lemaignan \textbf{LEADOR: End-to-End Participatory
+    Winkle et al. \textbf{LEADOR: End-to-End Participatory
     Design of Autonomous Social Robots} FrontiersIn AI \& Robotics 2021}
 \begin{frame}{LEADOR: end-to-end participatory methodology}
 
@@ -622,15 +657,13 @@ robot competencies}, ICSR 2015;\newline
     \pause
 
         From a technique:
-        \begin{center}
-        \textbf{SPARC: Supervised progressively autonomous robot
+
+        \textbf{SPARC: Supervised progressively \\autonomous robot
         competencies}
-        \end{center}
 
         to a methodology: 
-        \begin{center}
-        \textbf{LEADOR: Led-by-Experts Automation and Design Of Robots}
-        \end{center}
+
+        \textbf{LEADOR: Led-by-Experts Automation \\and Design Of Robots}
 
 
 \end{frame}
@@ -638,6 +671,7 @@ robot competencies}, ICSR 2015;\newline
 
 
 \begin{frame}{Ready for the industry?}
+    \vspace{-1.2cm}
     \begin{columns}
         \begin{column}{0.5\linewidth}
             \onslide<1->{
@@ -661,6 +695,191 @@ robot competencies}, ICSR 2015;\newline
 
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[plain]
+
+        {\Large \ldots and now for something more technical}
+
+        (time permitting\ldots?)
+\end{frame}
+
+\section{ROS4HRI: brief introduction}
+
+\begin{frame}[plain]{}
+
+    \Large
+    \center
+    {\bf ROS REP-155 aka ROS4HRI}
+
+    \vspace{1em}
+    {\bf \href{https://www.ros.org/reps/rep-0155.html}{www.ros.org/reps/rep-0155.html}}
+
+    Still an ``\emph{open REP}'': will evolve based on community feedback (eg,
+    \textbf{you!})\\
+
+\end{frame}
+
+{
+    \paper{Mohamed, Lemaignan, \textbf{ROS for Human-Robot Interaction}, IROS 2021}
+\begin{frame}{Why ROS4HRI?}
+
+    \begin{itemize}
+        \item  dealing with humans is actually hard: they keep on disappearing/reappearing; hard to predict where/when; ‘shape’ known at run-time only, etc.
+
+\item widely different requirements depending on application: from ‘2D points’ to full online kinematic model.
+
+    \item no ROS standard for HRI (nothing, nada, rien!)
+    \end{itemize}
+
+\end{frame}
+}
+
+\begin{frame}{Human representation: permanent vs transient IDs}
+
+        \includegraphics<1>[width=0.9\linewidth]{ros4hri/ids_0}
+        \includegraphics<2>[width=0.9\linewidth]{ros4hri/ids_1}
+        \includegraphics<3>[width=0.9\linewidth]{ros4hri/ids_2}
+        \includegraphics<4>[width=0.9\linewidth]{ros4hri/ids_3}
+        \includegraphics<5>[width=0.9\linewidth]{ros4hri/ids_4}
+        \includegraphics<6>[width=0.9\linewidth]{ros4hri/ids_5}
+\end{frame}
+
+%\begin{frame}{Semantic of IDs}
+%    \scriptsize
+%    \begin{tabular}{@{}lllp{6.5cm}@{}}
+%\toprule
+%\textbf{Face ID} & \textbf{Body ID} & \textbf{Person ID} & \textbf{Interpretation}                                                                                                                                                                                                                                                                 \\ \midrule
+%        \texttt{\#24ac }          & \texttt{Ø     }           & \texttt{Ø     }             & \tiny Face detected - random id \texttt{\#24ac} assigned - corresponding TF frame \texttt{/face\_24ac} is published.                                                                                                                                                                                            \\
+%        \texttt{\#d73b }          & \texttt{Ø     }           & \texttt{Ø     }             & \tiny Face detected (possibly a re-detection of a previous one) - random id \texttt{\#d73b} assigned + frame published.                                                                                                                                                                                \\
+%        \texttt{Ø      }          & \texttt{\#37ef}           & \texttt{Ø     }             & \tiny Skeleton detected - id \texttt{\#37ef} assigned + frame \texttt{/body\_37ef} published.                                                                                                                                                                                                                   \\
+%        \texttt{\#d73b }          & \texttt{\#37ef}           & \texttt{Ø     }             & \tiny Face/body matcher merged the face and the skeleton into a single agent. The 2 previous records do not exist any more independently.                                                                                                                                                     \\
+%        \texttt{Ø      }          & \texttt{Ø     }           & \texttt{\#9d8a}             & \tiny Human \texttt{\#9d8a} is known, but not associated to any face or body. Note that TF frame \texttt{/person\_9d8a} might nevertheless exist (for instance, last known position of the human).                                                                                                              \\
+%        \texttt{\#d73b }          & \texttt{Ø     }           & \texttt{\#9d8a}             & \tiny Face \texttt{\#d73b} is associated to human \texttt{\#9d8a}. Typical result of successful face recognition.                                                                                                                                                                                               \\
+%        \texttt{\#96f1 }          & \texttt{Ø     }           & \texttt{\#9d8a}             & \tiny Human \texttt{\#9d8a} is now associated to face \texttt{\#96f1}: this new association might come from the face tracker losing track of a previous face, thus re-assigning a different id to the face. The newly assigned face is however recognized by the face recognition module as being human \texttt{\#9d8a}. \\
+%        \texttt{\#96f1 }          & \texttt{\#37ef}           & \texttt{\#9d8a}             & \tiny The human \texttt{\#9d8a} is fully tracked: both the head and the body are detected.                                                                                                                                                                                                             \\
+%        \texttt{Ø      }          & \texttt{\#37ef}           & \texttt{\#9d8a}             & \tiny Only the body of human \texttt{\#9d8a} is tracked: this situation typically occurs if the face trackers loses the face after facial recognition successfully identified the human, and while the skeleton tracker still tracks the body.                                                         \\
+%        \texttt{Ø      }          & \texttt{Ø     }           & \texttt{\#b3da}             & \tiny \texttt{\#b3da} is another human, considered by the robot as different to \texttt{\#9d8a}.                                                                                                                                                                                                      \\ \bottomrule
+%\end{tabular}
+%\end{frame}
+
+\begin{frame}{Topics structure: faces}
+
+    Under \textbf{\texttt{/humans/faces/<faceID>/}} (eg \texttt{/humans/faces/bf3d}):
+
+    \scriptsize
+    \begin{tabular}{@{}llp{4cm}@{}}
+        \toprule
+\textbf{Name} & \textbf{Message type}         & \textbf{Description}                                                \\ \midrule
+        \texttt{/roi       }   & \texttt{sensor\_msgs/RegionOfInterest} & Region of the face in the source image                              \\
+        \texttt{/cropped       }   & \texttt{sensor\_msgs/Image} & Cropped face                              \\
+        \texttt{/frontalized       }   & \texttt{sensor\_msgs/Image} & Frontalised face                              \\
+        \texttt{/landmarks }   & \texttt{hri\_msgs/FacialLandmarks    } & The 2D facial landmarks extracted from the face                     \\
+        \texttt{/facs      }   & \texttt{hri\_msgs/FacialActionUnits  } & The presence and intensity of facial action units found in the face \\
+        \texttt{/expression}   & \texttt{hri\_msgs/Expression         } & The expression recognised from the face           \\  \bottomrule               
+\end{tabular}
+    
+\end{frame}
+
+\begin{frame}{Topics structure: bodies}
+
+    Under \textbf{\texttt{/humans/bodies/<bodyID>/}} (eg \texttt{/humans/bodies/5e4d}):
+
+    \scriptsize
+    \begin{tabular}{@{}llp{4cm}@{}}
+        \toprule
+        \textbf{Name} & \textbf{Message type}         & \textbf{Description}                                                \\ \midrule
+        \texttt{/roi       }   & \texttt{sensor\_msgs/RegionOfInterest} & Region of the whole body in the source image                              \\
+        \texttt{/cropped       }   & \texttt{sensor\_msgs/Image} & Cropped image of the body                              \\
+        \texttt{/skeleton2d}   & \texttt{hri\_msgs/Skeleton2D}        & The 2D points of the detected skeleton                              \\
+        \texttt{/attitude}    & \texttt{hri\_msgs/BodyAttitude}      & Recognised body attitude or gesture                                 \\
+        \bottomrule               
+\end{tabular}
+    
+\end{frame}
+
+\begin{frame}{Topics structure: voices}
+
+    Under \textbf{\texttt{/humans/voices/<voiceID>/}} (eg~\texttt{/humans/voices/dde2}):
+
+    \scriptsize
+    \begin{tabular}{@{}llp{4cm}@{}}
+        \toprule
+        \textbf{Name} & \textbf{Message type}         & \textbf{Description}                                                \\ \midrule
+        \texttt{/audio       } & \texttt{audio\_msgs/AudioData  } & Separated audio stream for this voice                     \\
+        \texttt{/features    } & \texttt{hri\_msgs/AudioFeatures} & INTERSPEECH’09 Emotion challenge low-level audio features \\
+        \texttt{/is\_speaking} & \texttt{std\_msgs/Bool         } & Whether or not speech is recognised from this voice       \\
+        \texttt{/speech      } & \texttt{std\_msgs/String       } & The live stream of speech recognized via an ASR engine \\
+        \bottomrule               
+\end{tabular}
+    
+\end{frame}
+
+\begin{frame}{Topics structure: persons}
+
+    Under \textbf{\texttt{/humans/persons/<personID>/}} (eg~\texttt{/humans/persons/45ff}):
+
+    \scriptsize
+    \begin{tabular}{@{}llp{4cm}@{}}
+        \toprule
+        \textbf{Name} & \textbf{Message type}         & \textbf{Description}                                                \\ \midrule
+        \texttt{/face\_id            } & \texttt{std\_msgs/String} (latched) & Face matched to that person (if any)                                                    \\
+        \texttt{/body\_id            } & \texttt{std\_msgs/String} (latched) & Body matched to that person (if any)                                                    \\
+        \texttt{/voice\_id           } & \texttt{std\_msgs/String} (latched) & Voice matched to that person (if any)                                                   \\
+        \texttt{/location\_confidence} & \texttt{std\_msgs/Float32        }  & Location confidence; 1 means 'person currently seen', 0 means 'person location unknown' \\
+        \texttt{/softbiometrics      } & \texttt{hri\_msgs/SoftBiometrics }  & Soft biometrics like age and gender of the person                                       \\
+        \texttt{/name                } & \texttt{std\_msgs/String         }  & Name, if known                                                                          \\
+        \texttt{/native\_language    } & \texttt{std\_msgs/String         }  & IETF language codes like \texttt{EN\_gb}, if known    \\
+\bottomrule
+\end{tabular}
+    
+\end{frame}
+
+\begin{frame}{Topics structure: interactions}
+
+    Under \textbf{\texttt{/humans/interactions/}}:
+
+    \scriptsize
+    \begin{tabular}{@{}llp{4cm}@{}}
+        \toprule
+        \textbf{Name} & \textbf{Message type}         & \textbf{Description}                                                \\ \midrule
+        \texttt{/groups                } & \texttt{hri\_msgs/GroupsStamped         }  & Estimated social groups                                                                          \\
+        \texttt{/gaze    } & \texttt{hri\_msgs/GazesStamped         }  & estimated gazing behaviours    \\
+\bottomrule
+\end{tabular}
+    
+\end{frame}
+
+\begin{frame}{Human physical representation}
+
+    \begin{columns}
+        \begin{column}{0.4\linewidth}
+            \begin{itemize}
+                \item standard ROS pipeline: joint state (eg OpenPose) -> \texttt{robot\_state\_publisher} + URDF
+
+                \item URDF generated on the fly, based on person’s height (xacro params)
+
+                \item Follows REP-120 as much as possible.
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.6\linewidth}
+            \begin{center}
+                \includegraphics[width=\linewidth]{ros4hri/skeletons}
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{One possible pipeline (but other are possible!)}
+    \begin{center}
+        \includegraphics[height=7cm]{ros4hri/ros4hri-pipeline2}
+    \end{center}
+\end{frame}
+
+
+\imageframe[scale=0.95]{ros4hri/ros4hri-status.png}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
